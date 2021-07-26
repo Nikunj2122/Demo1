@@ -28,4 +28,4 @@ jobs:
       - name: Configure git
         env:
           TOKEN: ${{ secrets.TEST_PAT }}
-        run: git config --global url."https://${TOKEN}:x-oauth-basic@https://github.com/Nikunj2122/Customercare     
+        run: git config --global url."https://${TOKEN}:x-oauth-basic@https://github.com/Nikunj2122/Customercare"     
