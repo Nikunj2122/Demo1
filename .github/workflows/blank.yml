@@ -1,0 +1,33 @@
+name: CI
+
+
+on:
+
+  push:
+    branches: [ main ]
+ 
+
+
+#  workflow_dispatch:
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+        with:
+           path: main
+      
+      - name: Create Src folder    
+        run: |
+          mkdir src && ls -l
+      
+      - name: Pushes to another repository locally
+        run: |
+           Git clone https://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:X-oauth-basic@ghttps://github.com/Nikunj2122/Customercare.git         
