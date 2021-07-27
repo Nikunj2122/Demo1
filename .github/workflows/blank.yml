@@ -27,7 +27,7 @@ jobs:
           mkdir src && ls -l
           
       - name: Checkout dependent repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
            repository: Nikunjrupapara/Customercare
            token: ${{ secrets.TEST_TOKEN }}
