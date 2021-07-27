@@ -25,7 +25,14 @@ jobs:
       - name: Create Src folder    
         run: |
           mkdir src && ls -l
-      - name: Configure git
-        env:
-          TOKEN: ${{ secrets.TEST_PAT }}
-        run: git clone https://${TOKEN}:x-oauth-basic@https://github.com/Nikunj2122/Customercare.git   
+          
+      - name: Checkout dependent repo
+        uses: actions/checkout@v2
+        with:
+           repository: Nikunjrupapara/Customercare
+           token: ${{ secrets.TEST_TOKEN }}
+         
+      #- name: Configure git
+      #  env:
+      #    TOKEN: ${{ secrets.TEST_PAT }}
+      #  run: git clone https://${TOKEN}:x-oauth-basic@https://github.com/Nikunj2122/Customercare.git   
