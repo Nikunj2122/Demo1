@@ -4,7 +4,7 @@ name: CI
 on:
 
   push:
-    branches: [ mainxyx ]
+    branches: [ main ]
  
 
 
@@ -15,7 +15,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
 
     steps:
@@ -24,7 +24,7 @@ jobs:
       
       - name: Create Src folder    
         run: |
-          mkdir src && ls -l
+          echo "Hello Test" && ls -l
           
 #      - name: Checkout dependent repo details
 #        uses: actions/checkout@v1
