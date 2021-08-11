@@ -4,7 +4,7 @@ name: CI
 on:
 
   push:
-    branches: [ main ]
+    branches: [ mainxyx ]
  
 
 
@@ -26,11 +26,11 @@ jobs:
         run: |
           mkdir src && ls -l
           
-      - name: Checkout dependent repo details
-        uses: actions/checkout@v1
-        with:
-           repository: Nikunjrupapara/Customercare
-           token: ${{ secrets.TEST_PAT }}
+#      - name: Checkout dependent repo details
+#        uses: actions/checkout@v1
+#        with:
+#           repository: Nikunjrupapara/Customercare
+#           token: ${{ secrets.TEST_PAT }}
          
       #- name: Configure git
       #  env:
