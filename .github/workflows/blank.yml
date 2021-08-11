@@ -24,7 +24,7 @@ jobs:
       
       - name: Create Src folder    
         run: |
-          echo "Hello Test" && ls -l
+          echo "Hello Test" 
           
 #      - name: Checkout dependent repo details
 #        uses: actions/checkout@v1
