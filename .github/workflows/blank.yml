@@ -38,8 +38,8 @@ jobs:
              echo "I am deploying to Test"
              
              
-  Deploy to stage:
-  
+  DeployStage:
+
          name: Deploy to Stage
          needs: [build]
          
