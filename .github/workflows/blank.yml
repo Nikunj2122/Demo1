@@ -20,6 +20,8 @@ jobs:
 
     steps:
     
+      - uses: action/checkoput@v2
+    
       - name: Compile   
         run: |
           echo "Hello Test"           
