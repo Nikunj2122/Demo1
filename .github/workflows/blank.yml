@@ -15,16 +15,28 @@ jobs:
 
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
-      - name: Create Src folder    
+    
+      - name: Compile   
         run: |
-          echo "Hello Test" 
+          echo "Hello Test"           
+  
+  Deploy:
+      name: Deploy to stage
+      needs: [build]
+      runs-on: ubuntu-latest
+      environment: 
+         name: Test
+      steps:
+         - name: Deploy
+         - run: I am deploying to Test
+         
+      
+      
+       
           
 #      - name: Checkout dependent repo details
 #        uses: actions/checkout@v1
