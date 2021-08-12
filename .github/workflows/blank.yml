@@ -16,25 +16,25 @@ jobs:
 
      steps:
     
-        - uses: action/checkoput@v2
+        - uses: action/checkout@v2
     
         - name: Compile   
           run: |
              echo "Hello Test"           
   
- # Deploy:
+  Deploy:
       
- #      name: Deploy to stage
- #      needs: [build]
+       name: Deploy to stage
+       needs: [build]
       
- #      runs-on: ubuntu-latest
- #      environment: 
- #        name: Test
+       runs-on: ubuntu-latest
+       environment: 
+         name: Test
       
- #      steps:
+       steps:
         
- #        - name: Deploy
- #        - run: I am deploying to Test
+         - name: Deploy
+         - run: I am deploying to Test
          
       
       
