@@ -15,24 +15,28 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
 
 
-    steps:
+     steps:
     
-      - uses: action/checkoput@v2
+        - uses: action/checkoput@v2
     
-      - name: Compile   
-        run: |
-          echo "Hello Test"           
+        - name: Compile   
+          run: |
+             echo "Hello Test"           
   
-  Test:
-      name: Deploy to stage
-      needs: [build]
-      runs-on: ubuntu-latest
-      environment: 
+  Deploy:
+      
+       name: Deploy to stage
+       needs: [build]
+      
+       runs-on: ubuntu-latest
+       environment: 
          name: Test
-      steps:
+      
+       steps:
+        
          - name: Deploy
          - run: I am deploying to Test
          
