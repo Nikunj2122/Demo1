@@ -32,9 +32,10 @@ jobs:
       
        steps:
         
-         - uses: actions/checkout@v2
+         
          - name: Deploy
-         - run: I am deploying to Test
+           run: |
+             echo "I am deploying to Test"
          
       
       
