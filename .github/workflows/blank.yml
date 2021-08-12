@@ -21,9 +21,9 @@ jobs:
           run: |
              echo "Hello Test"           
   
-  Deploy:
+  DeployDev:
       
-       name: Deploy to stage
+       name: Deploy to Dev
        needs: [build]
       
        runs-on: ubuntu-latest
@@ -33,9 +33,31 @@ jobs:
        steps:
         
          
-         - name: Deploy
+         - name: Deploy to Test
            run: |
              echo "I am deploying to Test"
+             
+             
+  Deploy to stage:
+  
+         name: Deploy to Stage
+         needs: [build]
+         
+         runs-on: ubuntu-latest
+         environment: 
+             name: Stage
+          
+          
+         steps:
+        
+         
+         - name: Deploy to Stage
+           run: |
+             echo "I am deploying to Stage" 
+         
+         
+             
+             
          
       
       
