@@ -19,7 +19,7 @@ jobs:
     
         - name: Compile & Build   
           run: |
-             echo "Hello Build is Ready"           
+             echo "Hello Build is Ready!!"           
   
   DeployDev:
       
