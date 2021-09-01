@@ -4,7 +4,7 @@ name: CI
 on:
 
   push:
-    branches: [ mainxyzz ]
+    branches: [ main ]
 
 jobs:
 
@@ -20,15 +20,19 @@ jobs:
         - name: Compile & Build   
           run: |
              echo "Hello Build is Ready!!"           
+             
+        - name: Deploy to Dev automatically when any changes happen in source code
+          run: |
+             echo "Deploy to Dev Env "
   
-  DeployDev:
+  DeployTest:
       
-       name: Deploy to Dev
+       name: Deploy to Test
        needs: [build]
       
        runs-on: ubuntu-latest
        environment: 
-         name: Dev
+         name: Test
       
        steps:
         
