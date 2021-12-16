@@ -23,7 +23,7 @@ jobs:
              
         - name: Deploy to Dev automatically when any changes happen in source code
           run: |
-             echo "Deploy to Dev Env "
+             echo "Deploy to Dev Env! "
   
   DeployTest:
       
